@@ -1,7 +1,4 @@
-# ===========================================================================
-# DECAP CMS CONFIG — defines what Sophia can edit in the admin panel
-# Edits save directly to config.json, which powers the live site.
-# ===========================================================================
+# Decap CMS config — matches config.json structure for v4 Sophia site
 
 backend:
   name: git-gateway
@@ -10,7 +7,6 @@ backend:
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
-# Gives Sophia a draft/preview step before publishing (recommended)
 publish_mode: editorial_workflow
 
 collections:
@@ -20,16 +16,19 @@ collections:
     editor:
       preview: false
     files:
-
-      # =====================================================================
-      # 🌺 Everything in one editable screen (keeps JSON structure intact)
-      # =====================================================================
       - name: "site"
-        label: "🌺  Edit Site Content"
+        label: "🌸  Edit Site Content"
         file: "config.json"
         fields:
 
-          # --- BRAND ---
+          - label: "📣  Announcement Bar"
+            name: "announce"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Show the bar?", name: "show", widget: "boolean", default: true }
+              - { label: "Announcement Text", name: "text", widget: "string" }
+
           - label: "🏷️  Brand & Logo"
             name: "brand"
             widget: "object"
@@ -40,13 +39,12 @@ collections:
                 widget: "image"
                 required: false
                 default: "default"
-                hint: "Upload a square logo (SVG or PNG). Leave blank to use the default hibiscus design."
-              - { label: "Logo Alt Text (for screen readers)", name: "logoAlt", widget: "string" }
-              - { label: "Brand Name", name: "name", widget: "string", hint: "Big script text in the header" }
-              - { label: "Tagline Under Name", name: "tagline", widget: "string", hint: "Small uppercase text — e.g. 'BOOKKEEPING'" }
-              - { label: "Footer Blurb", name: "footerTagline", widget: "text", hint: "Short paragraph shown next to the logo in the footer" }
+                hint: "Upload a square logo. Leave blank to use the default italic 'S' monogram."
+              - { label: "Logo Alt Text", name: "logoAlt", widget: "string" }
+              - { label: "Brand Name", name: "name", widget: "string" }
+              - { label: "Tagline Under Name", name: "tagline", widget: "string" }
+              - { label: "Footer Blurb", name: "footerTagline", widget: "text" }
 
-          # --- NAVIGATION ---
           - label: "🧭  Navigation Menu"
             name: "nav"
             widget: "object"
@@ -57,118 +55,125 @@ collections:
                 widget: "list"
                 fields:
                   - { label: "Link Label", name: "label", widget: "string" }
-                  - { label: "Link Target", name: "href", widget: "string", hint: "#services, #approach, etc." }
+                  - { label: "Link Target", name: "href", widget: "string" }
               - { label: "CTA Button Text", name: "ctaLabel", widget: "string" }
               - { label: "CTA Button Link", name: "ctaHref", widget: "string" }
 
-          # --- HERO ---
-          - label: "⭐  Hero Section (top of page)"
+          - label: "⭐  Hero Section"
             name: "hero"
             widget: "object"
             collapsed: true
             fields:
-              - { label: "Eyebrow (small tag above headline)", name: "eyebrow", widget: "string" }
-              - { label: "Headline Line 1", name: "headlineLine1", widget: "string", hint: "Shown in dark green serif" }
-              - { label: "Headline Line 2 (script accent)", name: "headlineLine2", widget: "string", hint: "Shown in orange handwritten script" }
-              - { label: "Headline Line 3", name: "headlineLine3", widget: "string", hint: "Shown in dark green serif" }
-              - { label: "Subheadline Paragraph", name: "subheadline", widget: "text" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline Line 1", name: "headlineLine1", widget: "string" }
+              - { label: "Headline Line 2 (pink italic)", name: "headlineLine2", widget: "string" }
+              - { label: "Headline Line 3", name: "headlineLine3", widget: "string" }
+              - { label: "Subheadline", name: "subheadline", widget: "text" }
               - { label: "Button Text", name: "ctaLabel", widget: "string" }
               - { label: "Button Link", name: "ctaHref", widget: "string" }
-              - { label: "Handwritten Note Next To Button", name: "sideNote", widget: "string", hint: "E.g. 'takes 2 mins!'" }
-              - label: "Hero Visual Card"
-                name: "card"
+              - { label: "Side Note (italic text next to button)", name: "sideNote", widget: "string" }
+              - label: "Process Card (right side of hero)"
+                name: "processCard"
                 widget: "object"
                 fields:
-                  - { label: "Small Label", name: "eyebrow", widget: "string" }
-                  - { label: "Big Text (top)", name: "bigTextLine1", widget: "string" }
-                  - { label: "Script Text (middle)", name: "bigTextLine2", widget: "string" }
-                  - { label: "Caption (bottom)", name: "caption", widget: "string" }
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                  - label: "Steps (3 recommended)"
+                    name: "steps"
+                    widget: "list"
+                    fields:
+                      - { label: "Step Number (e.g., 01)", name: "num", widget: "string" }
+                      - { label: "Step Title", name: "title", widget: "string" }
+                      - { label: "Step Description", name: "description", widget: "text" }
 
-          # --- MARQUEE ---
-          - label: "🎢  Scrolling Marquee"
-            name: "marquee"
-            widget: "list"
+          - label: "✨  Trust Bar"
+            name: "trustBar"
+            widget: "object"
             collapsed: true
-            field: { label: "Marquee Text", name: "text", widget: "string" }
-            hint: "These phrases scroll across the green banner. Add, remove, or reorder as you like."
+            fields:
+              - { label: "Show this section?", name: "show", widget: "boolean", default: true }
+              - { label: "Label (above grid)", name: "label", widget: "string" }
+              - label: "Items (6 recommended)"
+                name: "items"
+                widget: "list"
+                fields:
+                  - label: "Icon"
+                    name: "icon"
+                    widget: "select"
+                    options: ["nonprofit", "business", "cpa", "founder", "church", "consultant"]
+                  - { label: "Text", name: "text", widget: "string" }
 
-          # --- ABOUT ---
           - label: "👋  About The Practice"
             name: "about"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Title", name: "title", widget: "string", hint: "Wrap script words in <em>...</em>" }
+              - { label: "Title", name: "title", widget: "string", hint: "Wrap emphasized words in <em>...</em>" }
+              - label: "Sophia's Photo"
+                name: "imageUrl"
+                widget: "image"
+                required: false
+              - { label: "Photo Alt Text", name: "imageAlt", widget: "string" }
               - label: "Paragraphs"
                 name: "paragraphs"
                 widget: "list"
                 field: { label: "Paragraph", name: "text", widget: "text" }
-              - { label: "Pull Quote", name: "pullQuote", widget: "text", hint: "Wrap script words in <em>...</em>" }
-              - label: "Owner Profile (Sophia)"
+              - { label: "Pull Quote", name: "pullQuote", widget: "text", hint: "Wrap emphasized words in <em>...</em>" }
+              - label: "Sophia's Info (shown below photo)"
                 name: "owner"
                 widget: "object"
                 fields:
-                  - label: "Owner Photo"
-                    name: "photo"
-                    widget: "image"
-                    required: false
-                    hint: "Portrait orientation works best, 600×750px or larger"
-                  - { label: "Photo Alt Text", name: "photoAlt", widget: "string" }
                   - { label: "Name", name: "name", widget: "string" }
                   - { label: "Title / Role", name: "title", widget: "string" }
-                  - { label: "Quote from Owner", name: "quote", widget: "text" }
 
-          # --- SERVICES ---
           - label: "🧾  Services Section"
             name: "services"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Section Title", name: "title", widget: "string", hint: "Wrap script words in <em>...</em>" }
-              - { label: "Lede (intro paragraph)", name: "lede", widget: "text" }
-              - label: "Flagship / Featured Service (big card)"
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Lede", name: "lede", widget: "text" }
+              - label: "First Service"
                 name: "featured"
                 widget: "object"
                 fields:
-                  - { label: "Small Label", name: "label", widget: "string" }
-                  - { label: "Title", name: "title", widget: "string", hint: "Wrap script words in <em>...</em>" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
-                  - label: "Bullet Points"
+                  - label: "Bullets (optional)"
                     name: "bullets"
                     widget: "list"
+                    required: false
                     field: { label: "Bullet", name: "text", widget: "string" }
-              - label: "Additional Services (smaller cards)"
+              - label: "Additional Services"
                 name: "items"
                 widget: "list"
                 fields:
-                  - { label: "Small Label", name: "label", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
-                  - label: "Bullet Points (optional)"
+                  - label: "Bullets (optional)"
                     name: "bullets"
                     widget: "list"
                     required: false
                     field: { label: "Bullet", name: "text", widget: "string" }
 
-          # --- DIFFERENTIATORS ---
-          - label: "✨  What Sets Us Apart"
+          - label: "⭐  How I Work"
             name: "differentiators"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Section Title", name: "title", widget: "string" }
-              - label: "The 4 Principles"
+              - label: "The Principles"
                 name: "items"
                 widget: "list"
                 fields:
-                  - { label: "Badge (roman numeral)", name: "badge", widget: "string" }
+                  - { label: "Roman Numeral", name: "badge", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
 
-          # --- CASE STUDY ---
           - label: "📖  Client Case Study"
             name: "caseStudy"
             widget: "object"
@@ -176,12 +181,16 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title Line 1", name: "titleLine1", widget: "string" }
-              - { label: "Title Line 2 (script)", name: "titleLine2", widget: "string" }
+              - { label: "Title Line 2 (italic)", name: "titleLine2", widget: "string" }
+              - label: "Case Study Image"
+                name: "imageUrl"
+                widget: "image"
+                required: false
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
               - label: "Paragraphs"
                 name: "paragraphs"
                 widget: "list"
                 field: { label: "Paragraph", name: "text", widget: "text" }
-                hint: "Wrap bolded words in <strong>...</strong>"
               - { label: "Pull Quote", name: "quote", widget: "text" }
               - label: "Before / After Comparison"
                 name: "comparison"
@@ -207,25 +216,44 @@ collections:
                       - { label: "After Label", name: "afterLabel", widget: "string" }
                       - { label: "After Value", name: "afterValue", widget: "string" }
                       - { label: "After Caption", name: "afterCaption", widget: "string" }
-                  - { label: "Result Prefix", name: "resultPrefix", widget: "string" }
-                  - { label: "Result Script Text", name: "resultScript", widget: "string" }
-                  - { label: "Result Suffix", name: "resultSuffix", widget: "string" }
 
-          # --- AUDIENCE ---
-          - label: "🎯  Who We Serve"
+          - label: "💬  Testimonial"
+            name: "testimonial"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Show this section?", name: "show", widget: "boolean", default: true }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Attribution", name: "attribution", widget: "string" }
+
+          - label: "📊  Stats"
+            name: "stats"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Show this section?", name: "show", widget: "boolean", default: true }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Stat Blocks"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Big Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+
+          - label: "🎯  Who I Serve"
             name: "audience"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Section Title", name: "title", widget: "string" }
-              - label: "Audience Tiles"
+              - label: "Audience Items"
                 name: "items"
                 widget: "list"
-                field: { label: "Tile Text", name: "text", widget: "string" }
+                field: { label: "Text", name: "text", widget: "string" }
 
-          # --- CONTACT ---
-          - label: "📬  Contact Section & Form"
+          - label: "📬  Contact Section"
             name: "contact"
             widget: "object"
             collapsed: true
@@ -233,21 +261,18 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
-              - { label: "Script Note", name: "scriptNote", widget: "string" }
+              - { label: "Italic Note (left side)", name: "scriptNote", widget: "string" }
               - { label: "Email Address", name: "email", widget: "string" }
-              - { label: "Phone Number (display)", name: "phone", widget: "string" }
-              - { label: "Phone Number (digits only for click-to-call)", name: "phoneHref", widget: "string", hint: "E.g. +19175435276" }
-              - { label: "Form Badge", name: "formBadge", widget: "string" }
+              - { label: "Phone (display)", name: "phone", widget: "string" }
+              - { label: "Phone (click-to-call)", name: "phoneHref", widget: "string" }
               - { label: "Submit Button Label", name: "submitLabel", widget: "string" }
               - { label: "Note Below Form", name: "formNote", widget: "string" }
               - label: "Form Provider"
                 name: "formProvider"
                 widget: "select"
                 options: ["demo", "formspree", "netlify", "web3forms", "mailto"]
-                hint: "Use 'demo' for testing. Change to 'formspree' when you've added your endpoint below."
-              - { label: "Form Endpoint URL", name: "formAction", widget: "string", hint: "Paste your Formspree endpoint here" }
+              - { label: "Form Endpoint URL", name: "formAction", widget: "string" }
 
-          # --- FOOTER ---
           - label: "🦶  Footer"
             name: "footer"
             widget: "object"
@@ -266,6 +291,6 @@ collections:
                 name: "designerCredit"
                 widget: "object"
                 fields:
-                  - { label: "Tagline (before designer name)", name: "tagline", widget: "string" }
-                  - { label: "Designer / Brand Name", name: "brand", widget: "string" }
-                  - { label: "Designer Website URL", name: "url", widget: "string" }
+                  - { label: "Tagline (before name)", name: "tagline", widget: "string" }
+                  - { label: "Designer Name", name: "brand", widget: "string" }
+                  - { label: "Designer URL", name: "url", widget: "string" }
