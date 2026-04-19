@@ -1,7 +1,48 @@
 {
-  "announce": {
-    "show": true,
-    "text": "Currently booking cleanups for summer"
+  "contact": {
+    "eyebrow": "Get In Touch",
+    "phone": "(917) 543-5276",
+    "formProvider": "demo",
+    "formNote": "I respond within 48 hours.",
+    "title": "Ready for a <em>fresh start?</em>",
+    "phoneHref": "+19175435276",
+    "formAction": "https://formspree.io/f/YOUR_FORM_ID",
+    "submitLabel": "Send Message",
+    "email": "sophia@staylorbookkeeping.com",
+    "description": "Fill out the form and I'll respond within 48 hours with next steps and a realistic estimate.",
+    "scriptNote": "No obligation, no judgment about how behind you are."
+  },
+  "nav": {
+    "links": [
+      {
+        "label": "Services",
+        "href": "#services"
+      },
+      {
+        "label": "Approach",
+        "href": "#approach"
+      },
+      {
+        "label": "Case Study",
+        "href": "#story"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "ctaLabel": "Get an Estimate",
+    "ctaHref": "#contact"
+  },
+  "audience": {
+    "eyebrow": "Who I Serve",
+    "title": "Made for those who need a <em>reset.</em>",
+    "items": [
+      "Nonprofits with years of unorganized records",
+      "Small businesses behind on bookkeeping",
+      "Organizations preparing for tax filing or audits",
+      "Anyone who needs cleanup before their accountant"
+    ]
   },
   "brand": {
     "logo": "default",
@@ -10,44 +51,34 @@
     "tagline": "Bookkeeping",
     "footerTagline": "Cleanup and catch-up bookkeeping for nonprofits and small businesses. Clean records, delivered with care — and without judgment."
   },
-  "nav": {
-    "links": [
-      { "label": "Services", "href": "#services" },
-      { "label": "Approach", "href": "#approach" },
-      { "label": "Case Study", "href": "#story" },
-      { "label": "Contact", "href": "#contact" }
-    ],
-    "ctaLabel": "Get an Estimate",
-    "ctaHref": "#contact"
-  },
-  "hero": {
-    "eyebrow": "Cleanup & Catch-Up Bookkeeping",
-    "headlineLine1": "Clean,",
-    "headlineLine2": "accountant-ready",
-    "headlineLine3": "books.",
-    "subheadline": "Months or years behind? Don't worry. I methodically overhaul disorganized financials and deliver pristine records — so tax season stops being the thing you dread.",
-    "ctaLabel": "Request an Estimate",
-    "ctaHref": "#contact",
-    "sideNote": "takes two minutes",
-    "processCard": {
-      "eyebrow": "My Process",
-      "steps": [
-        { "num": "01", "title": "Assess", "description": "I review your current books and identify every gap." },
-        { "num": "02", "title": "Reconcile", "description": "I clean, correct, and bring every account current." },
-        { "num": "03", "title": "Deliver", "description": "Accountant-ready records, clearly organized." }
-      ]
-    }
-  },
-  "trustBar": {
+  "announce": {
     "show": true,
-    "label": "Trusted by",
+    "text": "Currently booking cleanups for summer"
+  },
+  "differentiators": {
+    "eyebrow": "How I Work",
+    "title": "Four principles that <em>shape the work.</em>",
     "items": [
-      { "icon": "nonprofit", "text": "Nonprofit Orgs" },
-      { "icon": "business", "text": "Small Businesses" },
-      { "icon": "cpa",       "text": "CPAs & Accountants" },
-      { "icon": "founder",   "text": "Solo Founders" },
-      { "icon": "church",    "text": "Faith-Based Orgs" },
-      { "icon": "consultant","text": "Consultants" }
+      {
+        "badge": "i",
+        "title": "Efficiency without shortcuts",
+        "description": "I complete work in a timely manner — never at the expense of accuracy."
+      },
+      {
+        "badge": "ii",
+        "title": "A clear process",
+        "description": "You always know what to expect, what's needed, and where we are."
+      },
+      {
+        "badge": "iii",
+        "title": "Accountant-ready results",
+        "description": "Your records arrive clean, organized, and immediately usable — no cleanup required."
+      },
+      {
+        "badge": "iv",
+        "title": "Cost-conscious approach",
+        "description": "Realistic solutions without unnecessary expense or inflated hours."
+      }
     ]
   },
   "about": {
@@ -65,6 +96,124 @@
       "name": "Sophia Taylor",
       "title": "Founder & Bookkeeper"
     }
+  },
+  "caseStudy": {
+    "eyebrow": "A Client Story",
+    "titleLine1": "Seven years behind.",
+    "titleLine2": "Caught up in one month.",
+    "imageUrl": "https://images.pexels.com/photos/97987/pexels-photo-97987.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "imageAlt": "Minimalist desk with notebook and pen — methodical work.",
+    "paragraphs": [
+      "A nonprofit organization came to me with financial records that were <strong>over seven years behind.</strong> They assumed the cleanup would take months — maybe a full year — and cost thousands.",
+      "I assessed their records, implemented a structured cleanup process, brought all financials fully up to date, and delivered accountant-ready books <strong>within one month</strong> — at a cost well below what they'd feared."
+    ],
+    "quote": "Clarity, compliance, and peace of mind — far sooner and cheaper than anticipated.",
+    "comparison": {
+      "row1": {
+        "beforeLabel": "Expected",
+        "beforeValue": "12 months",
+        "beforeCaption": "The client's initial estimate",
+        "afterLabel": "Delivered",
+        "afterValue": "1 month",
+        "afterCaption": "Fully reconciled & reported"
+      },
+      "row2": {
+        "beforeLabel": "Expected Cost",
+        "beforeValue": "$$$$",
+        "beforeCaption": "Thousands feared",
+        "afterLabel": "Actual Cost",
+        "afterValue": "$$",
+        "afterCaption": "Well below expectation"
+      }
+    }
+  },
+  "hero": {
+    "ctaLabel": "Request an Estimate",
+    "headlineLine1": "Clean,",
+    "sideNote": "takes two minutes",
+    "eyebrow": "Cleanup & Catch-Up Bookkeeping",
+    "headlineLine2": "accountant-ready",
+    "headlineLine3": "books.",
+    "subheadline": "Months or years behind? Don't worry. I methodically overhaul disorganized financials and deliver pristine records — so tax season stops being the thing you dread.",
+    "ctaHref": "#contact",
+    "processCard": {
+      "eyebrow": "My Process",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Assess",
+          "description": "I review your current books and identify every gap."
+        },
+        {
+          "num": "02",
+          "title": "Reconcile",
+          "description": "I clean, correct, and bring every account current."
+        },
+        {
+          "num": "03",
+          "title": "Deliver",
+          "description": "Accountant-ready records, clearly organized."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "servicesHeading": "Services",
+    "servicesLinks": [
+      {
+        "label": "Cleanup & Catch-Up",
+        "href": "#services"
+      },
+      {
+        "label": "Accountant Prep",
+        "href": "#services"
+      },
+      {
+        "label": "Reconciliation",
+        "href": "#services"
+      },
+      {
+        "label": "Financial Reporting",
+        "href": "#services"
+      }
+    ],
+    "contactHeading": "Get in touch",
+    "copyright": "S. Taylor Bookkeeping. All rights reserved.",
+    "designerCredit": {
+      "tagline": "Designed by",
+      "brand": "Chevelle",
+      "url": "https://www.bychevelle.com"
+    }
+  },
+  "trustBar": {
+    "show": true,
+    "label": "Trusted by",
+    "items": [
+      {
+        "icon": "nonprofit",
+        "text": "Nonprofit Orgs"
+      },
+      {
+        "icon": "business",
+        "text": "Small Businesses"
+      },
+      {
+        "icon": "cpa",
+        "text": "CPAs & Accountants"
+      },
+      {
+        "icon": "founder",
+        "text": "Solo Founders"
+      },
+      {
+        "icon": "church",
+        "text": "Faith-Based Orgs"
+      },
+      {
+        "icon": "consultant",
+        "text": "Consultants"
+      }
+    ]
   },
   "services": {
     "eyebrow": "What I Do",
@@ -103,46 +252,6 @@
       }
     ]
   },
-  "differentiators": {
-    "eyebrow": "How I Work",
-    "title": "Four principles that <em>shape the work.</em>",
-    "items": [
-      { "badge": "i",   "title": "Efficiency without shortcuts", "description": "I complete work in a timely manner — never at the expense of accuracy." },
-      { "badge": "ii",  "title": "A clear process",               "description": "You always know what to expect, what's needed, and where we are." },
-      { "badge": "iii", "title": "Accountant-ready results",      "description": "Your records arrive clean, organized, and immediately usable — no cleanup required." },
-      { "badge": "iv",  "title": "Cost-conscious approach",       "description": "Realistic solutions without unnecessary expense or inflated hours." }
-    ]
-  },
-  "caseStudy": {
-    "eyebrow": "A Client Story",
-    "titleLine1": "Seven years behind.",
-    "titleLine2": "Caught up in one month.",
-    "imageUrl": "https://images.pexels.com/photos/97987/pexels-photo-97987.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "imageAlt": "Minimalist desk with notebook and pen — methodical work.",
-    "paragraphs": [
-      "A nonprofit organization came to me with financial records that were <strong>over seven years behind.</strong> They assumed the cleanup would take months — maybe a full year — and cost thousands.",
-      "I assessed their records, implemented a structured cleanup process, brought all financials fully up to date, and delivered accountant-ready books <strong>within one month</strong> — at a cost well below what they'd feared."
-    ],
-    "quote": "Clarity, compliance, and peace of mind — far sooner and cheaper than anticipated.",
-    "comparison": {
-      "row1": {
-        "beforeLabel": "Expected",
-        "beforeValue": "12 months",
-        "beforeCaption": "The client's initial estimate",
-        "afterLabel": "Delivered",
-        "afterValue": "1 month",
-        "afterCaption": "Fully reconciled & reported"
-      },
-      "row2": {
-        "beforeLabel": "Expected Cost",
-        "beforeValue": "$$$$",
-        "beforeCaption": "Thousands feared",
-        "afterLabel": "Actual Cost",
-        "afterValue": "$$",
-        "afterCaption": "Well below expectation"
-      }
-    }
-  },
   "testimonial": {
     "show": true,
     "quote": "I came in terrified about how behind we were. She took one look at our books, gave me a real plan, and delivered clean records <em>faster and cheaper</em> than I imagined possible.",
@@ -153,48 +262,18 @@
     "eyebrow": "By the numbers",
     "title": "The proof is in the books.",
     "items": [
-      { "value": "7+", "label": "Years of records caught up" },
-      { "value": "30", "label": "Days — typical cleanup turnaround" },
-      { "value": "100%", "label": "Accountant-ready results" }
+      {
+        "value": "7+",
+        "label": "Years of records caught up"
+      },
+      {
+        "value": "30",
+        "label": "Days — typical cleanup turnaround"
+      },
+      {
+        "value": "100%",
+        "label": "Accountant-ready results"
+      }
     ]
-  },
-  "audience": {
-    "eyebrow": "Who I Serve",
-    "title": "Made for those who need a <em>reset.</em>",
-    "items": [
-      "Nonprofits with years of unorganized records",
-      "Small businesses behind on bookkeeping",
-      "Organizations preparing for tax filing or audits",
-      "Anyone who needs cleanup before their accountant"
-    ]
-  },
-  "contact": {
-    "eyebrow": "Get In Touch",
-    "title": "Ready for a <em>fresh start?</em>",
-    "description": "Fill out the form and I'll respond within 48 hours with next steps and a realistic estimate.",
-    "scriptNote": "No obligation, no judgment about how behind you are.",
-    "email": "sophia@staylorbookkeeping.com",
-    "phone": "(917) 543-5276",
-    "phoneHref": "+19175435276",
-    "submitLabel": "Send Message",
-    "formNote": "I respond within 48 hours.",
-    "formProvider": "demo",
-    "formAction": "https://formspree.io/f/YOUR_FORM_ID"
-  },
-  "footer": {
-    "servicesHeading": "Services",
-    "servicesLinks": [
-      { "label": "Cleanup & Catch-Up",  "href": "#services" },
-      { "label": "Accountant Prep",     "href": "#services" },
-      { "label": "Reconciliation",      "href": "#services" },
-      { "label": "Financial Reporting", "href": "#services" }
-    ],
-    "contactHeading": "Get in touch",
-    "copyright": "S. Taylor Bookkeeping. All rights reserved.",
-    "designerCredit": {
-      "tagline": "Designed by",
-      "brand": "Chevelle",
-      "url": "https://www.bychevelle.com"
-    }
   }
 }
