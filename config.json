@@ -1,8 +1,7 @@
 {
   "announce": {
     "show": true,
-    "text": "Currently booking cleanups for summer",
-    "script": "let's chat"
+    "text": "Currently booking cleanups for summer"
   },
   "brand": {
     "logo": "default",
@@ -30,40 +29,41 @@
     "ctaLabel": "Request an Estimate",
     "ctaHref": "#contact",
     "sideNote": "takes two minutes",
-    "scriptOverlay": "for nonprofits & small businesses",
-    "card": {
-      "bigTextLine1": "7",
-      "bigTextLine2": "years in 1 month",
-      "caption": "Real client. Real turnaround. Fully accountant-ready."
+    "processCard": {
+      "eyebrow": "My Process",
+      "steps": [
+        { "num": "01", "title": "Assess", "description": "I review your current books and identify every gap." },
+        { "num": "02", "title": "Reconcile", "description": "I clean, correct, and bring every account current." },
+        { "num": "03", "title": "Deliver", "description": "Accountant-ready records, clearly organized." }
+      ]
     }
   },
   "trustBar": {
     "show": true,
     "label": "Trusted by",
     "items": [
-      "Nonprofits",
-      "Founders",
-      "CPAs",
-      "Small Teams"
+      { "icon": "nonprofit", "text": "Nonprofit Orgs" },
+      { "icon": "business", "text": "Small Businesses" },
+      { "icon": "cpa",       "text": "CPAs & Accountants" },
+      { "icon": "founder",   "text": "Solo Founders" },
+      { "icon": "church",    "text": "Faith-Based Orgs" },
+      { "icon": "consultant","text": "Consultants" }
     ]
   },
   "about": {
     "eyebrow": "About The Practice",
     "title": "I specialize in the <em>cleanup</em> — not the routine.",
-    "imageUrl": "https://images.pexels.com/photos/30234387/pexels-photo-30234387.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "imageAlt": "A calm workspace — open laptop, green notebook, cup of coffee.",
-    "scriptOverlay": "quiet work,\\nclean results",
+    "imageUrl": "/assets/images/sophia.jpg",
+    "imageAlt": "Sophia Taylor, founder of S. Taylor Bookkeeping",
     "paragraphs": [
       "Most bookkeepers handle ongoing maintenance. My practice is different: I come in when things have already gotten away from you, and I restore order.",
-      "Many of my clients arrive feeling overwhelmed — behind by months or years, unsure where to start, and nervous about the cost. I assess the situation, lay out a clear plan, and methodically bring everything current."
+      "Many of my clients arrive feeling overwhelmed — behind by months or years, unsure where to start, and nervous about the cost. I assess the situation, lay out a clear plan, and methodically bring everything current.",
+      "I built this practice because I saw too many business owners and nonprofits treated like they should've known better. You didn't. It's fixable — and that's what I'm here for."
     ],
     "pullQuote": "My goal is simple: <em>clean records,</em> reduced stress, and readiness for tax filing.",
     "owner": {
-      "photo": "/assets/images/sophia.jpg",
-      "photoAlt": "Sophia Taylor, founder of S. Taylor Bookkeeping",
       "name": "Sophia Taylor",
-      "title": "Founder & Bookkeeper",
-      "quote": "I built this practice because I saw too many business owners and nonprofits treated like they should've known better. You didn't. It's fixable — and that's what I'm here for."
+      "title": "Founder & Bookkeeper"
     }
   },
   "services": {
@@ -140,17 +140,13 @@
         "afterLabel": "Actual Cost",
         "afterValue": "$$",
         "afterCaption": "Well below expectation"
-      },
-      "resultPrefix": "The result:",
-      "resultScript": "clean books, a clear mind,",
-      "resultSuffix": "and ready to file."
+      }
     }
   },
   "testimonial": {
     "show": true,
     "quote": "I came in terrified about how behind we were. She took one look at our books, gave me a real plan, and delivered clean records <em>faster and cheaper</em> than I imagined possible.",
-    "scriptName": "— Nonprofit Director,",
-    "attribution": "East Coast"
+    "attribution": "Nonprofit Director, East Coast"
   },
   "stats": {
     "show": true,
@@ -175,14 +171,13 @@
   "contact": {
     "eyebrow": "Get In Touch",
     "title": "Ready for a <em>fresh start?</em>",
-    "description": "Fill out the form and I'll respond within 24 hours with next steps and a realistic estimate.",
+    "description": "Fill out the form and I'll respond within 48 hours with next steps and a realistic estimate.",
     "scriptNote": "No obligation, no judgment about how behind you are.",
     "email": "sophia@staylorbookkeeping.com",
     "phone": "(917) 543-5276",
     "phoneHref": "+19175435276",
-    "formBadge": "hi there",
     "submitLabel": "Send Message",
-    "formNote": "I respond within 24 hours",
+    "formNote": "I respond within 48 hours.",
     "formProvider": "demo",
     "formAction": "https://formspree.io/f/YOUR_FORM_ID"
   },
@@ -197,7 +192,7 @@
     "contactHeading": "Get in touch",
     "copyright": "S. Taylor Bookkeeping. All rights reserved.",
     "designerCredit": {
-      "tagline": "Designed with care by",
+      "tagline": "Designed by",
       "brand": "Chevelle",
       "url": "https://www.bychevelle.com"
     }
